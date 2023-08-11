@@ -4,7 +4,10 @@ export default function ClientProjectsPage() {
   const router = useRouter();
 
   function loadProjectHandler() {
-    router.push("/clients/max/projecta");
+    router.push({
+      pathname: "/clients/[id]/[clientprojectid]",
+      query: { id: "max", clientprojectid: "projecta" },
+    });
   }
 
   return (
